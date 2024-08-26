@@ -1,0 +1,107 @@
+.coin-flip {
+  text-align: center;
+  margin: 20px;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+button {
+  background-color: #008cba;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #007bb5;
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+h2 {
+  color: #ffcc00;
+}
+
+.bet-form {
+  margin: 20px;
+}
+
+input, select {
+  margin: 10px;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.coin-selection {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.coin {
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.coin:hover {
+  transform: scale(1.1);
+}
+
+.selected {
+  border: 2px solid #ffcc00;
+  border-radius: 50%;
+}
+
+.coin-animation {
+  font-size: 1.5em;
+  color: #ffcc00;
+  margin-top: 20px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.result, .message {
+  font-size: 1.5em;
+  color: #ffcc00;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .coin {
+    width: 70px;
+    height: 70px;
+  }
+
+  button {
+    padding: 8px 16px;
+    margin: 8px;
+  }
+
+  .result, .message {
+    font-size: 1.2em;
+  }
+}
